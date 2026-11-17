@@ -4,8 +4,12 @@
 
 (package
  (name first)
- (synopsis "An OCaml project")
- (description "A starter OCaml project built with Dune.")
+ (synopsis "An animated OCaml weather dashboard")
+ (description "A beginner-friendly weather dashboard powered by Open-Meteo.")
  (depends
   (ocaml (>= 4.14))
-  (dune (>= 3.12))))
+  (dune (>= 3.12))
+  dream
+  cohttp-lwt-unix
+  yojson
+  uri))

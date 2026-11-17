@@ -1,4 +1,4 @@
 (executable
  (name main)
  (public_name first)
- (libraries first))
+ (libraries first dream cohttp-lwt-unix yojson uri lwt.unix))

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b35"><title>Atmos — Weather, beautifully simple</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main class="shell">
+    <header class="topbar"><a class="brand" href="/"><span class="brand-mark">✳</span> atmos</a><div class="top-note"><span class="live-dot"></span> LIVE WEATHER</div></header>
+    <section class="intro"><p class="eyebrow">YOUR WINDOW TO THE SKY</p><h1>Weather, <span>without the noise.</span></h1><p class="subtitle">A little forecast for wherever life takes you.</p>
+      <form id="search-form" class="search"><span class="search-icon">⌕</span><input id="city-input" type="search" value="Lahore" placeholder="Search a city…" aria-label="City name"><button type="submit">Search <span>↗</span></button></form>
+    </section>
+    <div id="message" class="message" role="status">Finding the weather…</div>
+    <section id="dashboard" class="dashboard" aria-live="polite">
+      <article class="hero-card glass">
+        <div class="hero-top"><div><p class="eyebrow">CURRENT WEATHER</p><h2 id="place-name">Lahore, Pakistan</h2><p id="local-time" class="muted">Local time</p></div><div class="sun-orbit" aria-hidden="true"><div class="sun"></div><span class="orbit-cloud">☁</span></div></div>
+        <div class="current-weather"><div class="temperature"><span id="temperature">--</span><sup>°</sup></div><div class="condition"><div id="weather-icon" class="weather-icon">☀️</div><div id="condition-label">Loading…</div><p class="muted">Feels like <span id="feels-like">--</span>°</p></div></div>
+        <div class="hero-footer"><div><span class="footer-icon">☂</span><span><small>PRECIPITATION</small><b id="precipitation">-- mm</b></span></div><div><span class="footer-icon">♧</span><span><small>HUMIDITY</small><b id="humidity">--%</b></span></div><div><span class="footer-icon">≋</span><span><small>WIND</small><b id="wind">-- km/h</b></span></div></div>
+      </article>
+      <section class="side-card glass"><div class="section-heading"><div><p class="eyebrow">THE NEXT HOURS</p><h3>Make the most of today</h3></div><span class="heading-spark">✦</span></div>
+        <div class="sun-times"><div class="sun-time"><span class="time-icon sunrise">↗</span><div><small>SUNRISE</small><b id="sunrise">--:--</b></div></div><div class="sun-time"><span class="time-icon sunset">↘</span><div><small>SUNSET</small><b id="sunset">--:--</b></div></div></div>
+        <div class="tip"><span>✧</span><p id="weather-tip">A fresh look at the sky, updated just for you.</p></div>
+      </section>
+      <section class="forecast-card glass"><div class="section-heading"><div><p class="eyebrow">PLAN AHEAD</p><h3>7-day forecast</h3></div><span class="muted small">THIS WEEK</span></div><div id="forecast" class="forecast-list"></div></section>
+    </section>
+    <footer>Made with <span>✳</span> and a little OCaml · Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo</a></footer>
+  </main><script src="/app.js"></script>
+</body></html>
